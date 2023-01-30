@@ -1,4 +1,4 @@
-/* Array first program to taking inputs of int type and displaying it */
+/* Array first program to take input of int type and displaying it */
 import java.util.Scanner;
 public class TakingInputShowingOutput {
     public static void main(String[] args) {
