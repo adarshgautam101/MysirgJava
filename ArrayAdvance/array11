@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Distinct {
+    public static void main(String[] args) {
+        System.out.println("Enter the size of Array");
+        Scanner sc = new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]= new int[size];
+        int brr[]=new int[size];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        brr[0]=arr[0];
+        for(int i=1;i<arr.length;i++){
+            int j;
+            for( j=0;j<=i-1;j++){
+                if(arr[i]==brr[j]){
+                    break;
+                }
+            }
+            brr[j]=arr[i];
+        }
+        int count=0;
+        for(int i=0;i<brr.length;i++){
+           if(brr[i]!=0){
+            count++;
+
+           }
+           else
+           {
+               continue;
+           }
+        }
+        System.out.println(count);
+
+    }
+}
+
