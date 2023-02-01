@@ -1,0 +1,29 @@
+package prepisnta;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MaximumScalerOfTwoVector {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of Array");
+        int size=sc.nextInt();
+        int []arr= new int[size];
+        int []brr= new int[size];
+        System.out.println("Enter the First Array ");
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Enter the second array");
+        for(int j=0;j<brr.length;j++){
+            brr[j]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        Arrays.sort(brr);
+        int sum=0;
+        for(int k=0;k<arr.length;k++){
+            sum=sum+(arr[k]*brr[k]);
+        }
+        System.out.println("Scaler Products is "+sum);
+    }
+}
