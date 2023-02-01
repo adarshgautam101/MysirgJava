@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class EvenAndOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size of Array");
+        int size=sc.nextInt();
+        int []arr= new int[size];
+        System.out.println("Enter Number to Know what numbers are EVen and odd");
+        for(int i=0;i < arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        int countEven=0,countOdd=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                countEven++;
+            }
+            else
+            {
+                countOdd++;
+            }
+        }
+        System.out.println("Odd Numbers are "+countOdd);
+        System.out.println("Even Numbers are "+countEven);
+    }
+}
