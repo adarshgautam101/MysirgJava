@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class RotationLeftArray {
+    public static void main(String[] args) {
+        // Array of only one rotation from left side;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of Array");
+        int s=sc.nextInt();
+        int [] arr= new int[s];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+//        int k=arr[0];
+//        for(int i=0;i<arr.length-1;i++){
+//            arr[i]=arr[i+1];
+//        }
+//        arr[arr.length-1]=k;
+//        for(int i=0;i<arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+        // Array rotation from left and move 2 time;
+//        int k=arr[0];
+//        int l=arr[1];
+//        for(int i=0;i<arr.length-2;i++){
+//            arr[i]=arr[i+2];
+//        }
+//        arr[arr.length-2]=k;
+//        arr[arr.length-1]=l;
+//        for(int i=0;i<arr.length;i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//
+//
+
+
+}
