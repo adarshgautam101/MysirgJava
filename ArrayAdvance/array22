@@ -1,0 +1,37 @@
+public class Main       /*To find how many distinct are present*/
+{
+	public static void main(String[] args) {
+		int arr[]={1,2,1};
+		int l=1;
+		for(int i=1;i<arr.length;i++)
+		{
+		    for(int j=0;j<arr.length;j++){
+		        if(i>j){
+		            if(arr[i]==arr[j]){
+		                break;
+		            }
+		        }
+		        else if(j>i){
+		            if(arr[i]==arr[j]){
+		                break;
+		            }
+		        }
+		        else if(i==j){
+		            for(int k=0;k<arr.length;k++){
+		                if(k==j){
+		                    continue;
+		                }
+		                else
+		                {
+		                    if(arr[k]==arr[j]){
+		                        break;
+		                    }
+		                }
+		            }
+		            l++;
+		        }
+		    }
+		}
+		System.out.println(l);
+	}
+}
