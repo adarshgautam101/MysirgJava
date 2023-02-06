@@ -1,0 +1,35 @@
+package TwoDimensionalArray;
+import java.util.Scanner;
+public class SubtractionOfTwoMatrix {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the Array");
+        int size=sc.nextInt();
+        int [][]arr= new int[size][size];
+        int [][]brr= new int[size][size];
+        int[][]crr= new int[size][size];
+        System.out.println("Enter the Values for first Array ");
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("Enter the Second Array value");
+        for(int i=0;i<brr.length;i++){
+            for(int j=0;j<brr.length;j++){
+                brr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<crr.length;i++){
+            for(int j=0;j< crr.length;j++){
+                crr[i][j]=arr[i][j]-brr[i][j];
+            }
+        }
+        for(int i=0;i<crr.length;i++){
+            for(int j=0;j<crr.length;j++){
+                System.out.print(crr[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
