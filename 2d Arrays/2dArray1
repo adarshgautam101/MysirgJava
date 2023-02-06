@@ -1,0 +1,24 @@
+package TwoDimensionalArray;
+import java.util.Scanner;
+public class TakesInputAndDisplayingIt {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the size of 2d array we'll be considering as same for both size");
+        int size=sc.nextInt();
+        int [][] a= new int[size][size];
+        System.out.println("Enter the values for "+size+"*"+size);
+        for(int i=0;i<a.length;i++) {
+            for (int j = 0; j < a.length; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+            for(int k=0;k<a.length;k++){
+                for(int l=0;l<a.length;l++){
+                    System.out.print(a[k][l]+" ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
+
