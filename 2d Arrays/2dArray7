@@ -1,0 +1,44 @@
+package TwoDimensionalArray;
+import java.util.Scanner;
+public class SameMatrixOrNot {
+    public static void main(String[] args) {
+        System.out.println("Enter the size of the Array we'll be considering as both size");
+        Scanner sc = new Scanner(System.in);
+        int size=sc.nextInt();
+        int ar[][]= new int[size][size];
+        int brr[][]=new int[size][size];
+        System.out.println("Enter the First array value ");
+        for(int i=0;i<ar.length;i++){
+            for(int j=0;j<ar.length;j++){
+                ar[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("Enter the second array value");
+        for(int i=0;i<brr.length;i++){
+            for(int j=0;j<brr.length;j++){
+                brr[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println();
+        int count=0;
+        first:
+        for(int i=0;i<ar.length;i++){
+            for(int j=0;j<ar.length;j++){
+                if(ar[i][j]==brr[i][j]){
+                    continue;
+                }
+                else
+                {
+                    count++;
+                    break first;
+                }
+            }
+        }
+        if(count==1){
+            System.out.println("Matrix are not equals");
+        }
+        else {
+            System.out.println("Matrix are equal");
+        }
+    }
+}
