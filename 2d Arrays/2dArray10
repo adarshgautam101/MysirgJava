@@ -1,0 +1,38 @@
+package TwoDimensionalArray;
+import java.util.Scanner;
+public class ScalerMatrix {
+    public static void main(String[] args) {
+        System.out.println("Enter the size of the array");
+        Scanner sc = new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[][]=new int[size][size];
+        System.out.println("Enter the values of the Array");
+        for(int i=0;i< arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("Here we go");
+        int c=arr[0][0];
+        int check=0;
+        first:
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j< arr.length;j++){
+                if(i==j && c==arr[i][j]){
+                    continue;
+                }
+                else if(i==j && c!=arr[i][j]){
+                    check++;
+                    break first;
+                }
+            }
+        }
+        if(check==1){
+            System.out.println("Given Matrix is not in Scalar form");
+        }
+        else
+        {
+            System.out.println("Scaler form");
+        }
+    }
+}
