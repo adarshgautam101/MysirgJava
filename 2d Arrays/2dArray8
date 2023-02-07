@@ -1,0 +1,36 @@
+package TwoDimensionalArray;
+import java.util.Scanner;
+public class IdentityMatrix {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int size=sc.nextInt();
+        int [][]arr= new int[size][size];
+       for(int i=0;i<arr.length;i++){
+           for(int j=0;j<arr.length;j++){
+               arr[i][j]=sc.nextInt();
+           }
+       }
+       int count=0;
+       hero:
+       for(int i=0;i< arr.length;i++){
+           for(int j=0;j<arr.length;j++){
+               if(i==j && arr[i][j]==1){
+                   continue;
+               } else if (arr[i][j]==0) {
+                   continue;
+               }
+               else {
+                   count++;
+                   break hero;
+               }
+           }
+       }
+       if(count==1){
+           System.out.println("Matrix is not identity ");
+       }
+       else {
+           System.out.println("Maatrix is identity");
+       }
+    }
+}
