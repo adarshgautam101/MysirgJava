@@ -1,0 +1,34 @@
+package Strings;
+import java.util.Scanner;
+public class OccurenceOfCharacters {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String ");
+        String s = sc.nextLine();
+        char occ[]=s.toCharArray();
+        first:
+        for(int i=0;i<occ.length;i++){
+            int count=1;
+            for(int j=0;j<occ.length;j++){
+                if(i==j){
+                    continue;
+                } else if (occ[i]==occ[j]) {
+                    if(i<j){
+                        count++;
+                    }
+                    else if(i>j)
+                    {
+
+                        if(i==occ.length-1 ){
+                        break first ;
+                        }
+                        else
+                        i++;
+
+                    }
+                }
+            }
+            System.out.println("Count of "+occ[i]+" : "+count);
+        }
+    }
+}
