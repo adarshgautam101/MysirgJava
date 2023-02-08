@@ -1,0 +1,36 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Alphanumeric {
+    public static void main(String[] args) {
+        int count=0;
+        int jake=0;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the String ");
+        String s= sc.nextLine();
+        char str[]= s.toCharArray();
+        hello:
+        for(int i=0;i< str.length;i++){
+            if(str[i]>=65 && str[i]<=90){
+                count++;
+            }
+            else if(str[i]>=97 && str[i]<=122){
+                count++;
+            }
+            else if(str[i]>=48 && str[i]<=57){
+                count++;
+            }
+            else {
+                jake++;
+                break hello;
+            }
+        }
+        if(jake==1){
+            System.out.println("It is not alphanumeric Number");
+        }
+        else {
+            System.out.println("It is Alphanumeric");
+        }
+    }
+}
