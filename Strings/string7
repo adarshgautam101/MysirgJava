@@ -1,0 +1,30 @@
+package Strings;
+import java.util.Scanner;
+public class PalidronmeNumbers {
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+        System.out.println("Enter String We'll check whether this string is palindrome or not");
+        String s= sc.nextLine();
+        int count=0;
+        char str[]=s.toCharArray();
+        first:
+        for(int i=0;i<str.length;i++){
+            if(str[i]==str[str.length-i-1]){
+                continue ;
+            }
+            else {
+                count++;
+                break first;
+            }
+        }
+        if(count==1){
+            System.out.println("It is not palindrome String");
+        }
+        else
+        {
+            System.out.println("Palindrome String");
+        }
+
+
+    }
+}
