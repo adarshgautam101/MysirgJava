@@ -1,0 +1,34 @@
+package Strings;
+import java.util.Scanner;
+public class ToggleString {
+    public static void main(String[] args) {
+      ToggleString s= new ToggleString();
+      s.toggleString();
+    }
+    public void toggleString(){
+        System.out.println("Enter the String");
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+int count=0;
+        char str1[]=s.toCharArray();
+        for(int i=0;i<str1.length;i++){
+            if(str1[i]>=65 && str1[i]<=90){
+                str1[i]= (char) ((char)str1[i]+32);
+                System.out.print(str1[i]);
+            }
+            else if(str1[i]>=48 && str1[i]<=57){
+                count++;
+                continue;
+            }
+            else
+            {
+                str1[i]=(char)((char)str1[i]-32);
+                System.out.print(str1[i]);
+            }
+        }
+        if(count>0){
+            System.out.println();
+            System.out.println("Since you have entered the digit we can not change it ");
+        }
+    }
+}
