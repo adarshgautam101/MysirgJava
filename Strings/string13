@@ -1,0 +1,23 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class RemoveUnWantedSpaces {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the String ");
+        String s=sc.nextLine();
+//        System.out.println("We are removing unwanted spaces for the given string");
+        System.out.println();
+        char str[]= s.toCharArray();
+        for(int i=0;i<str.length;i++){
+            if(str[i]==' '){
+                continue;
+            }
+            else {
+                System.out.print(str[i]);
+            }
+        }
+
+    }
+}
