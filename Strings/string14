@@ -1,0 +1,20 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class RemovingBracesFromTheString {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String to remove braces and carley braces as well");
+        String s=sc.nextLine();
+        char str[]=s.toCharArray();
+        for(int i=0;i<str.length;i++){
+            if(str[i]=='}'||str[i]=='{'||str[i]=='('||str[i]==')'){
+                continue;
+            }
+            else {
+                System.out.print(str[i]);
+            }
+        }
+    }
+}
