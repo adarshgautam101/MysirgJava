@@ -1,0 +1,42 @@
+package assignment20;
+
+public class SortingOf0s1s2s {
+    public static void main(String[] args) {
+        int count0 = 0;
+        int count1 = 0;
+        int count2 = 0;
+        int nums[] = {2,0,1};
+       
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
+                count0++;
+            } else if (nums[i]==1) {
+
+                count1++;
+
+            }
+            else
+            {
+                count2++;
+            }
+        }
+        int brr[]= new int[nums.length];
+        int l=count0+count1;
+        for(int i=0;i<brr.length;i++){
+            if(i<count0){
+                brr[i]=0;
+            }
+            else if(i>=count0 && i<l){
+                brr[i]=1;
+            }
+            else
+            {
+                brr[i]=2;
+            }
+        }
+         for(int i=0;i<brr.length;i++){
+             System.out.print(brr[i]+" ");
+         }
+
+    }
+}
