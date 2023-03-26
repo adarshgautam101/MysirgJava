@@ -1,0 +1,24 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Sum of Array program
+public class SumOfArrays {
+    public static void main(String[] args) {
+        ArrayList<Integer> list= new ArrayList<>();
+        System.out.println("Enter how many value do you enter here");
+        Scanner sc = new Scanner(System.in);
+        int z=sc.nextInt();
+        for(int i=0;i<z;i++){
+            System.out.println("Enter the "+ (i+1) +" value ");
+            int k=sc.nextInt();
+            list.add(k);
+        }
+        int sum=0;
+        for(int i=0;i<list.size();i++){
+            sum=sum+list.get(i);
+        }
+        System.out.println(sum);
+    }
+}
