@@ -1,0 +1,31 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class ArrayList7 {
+    public static void main(String[] args) {
+        ArrayList <Integer> list= new ArrayList<>();
+        System.out.println("enter the size of the array");
+        Scanner sc = new Scanner(System.in);
+        int k=sc.nextInt();
+        for(int i=0;i<k;i++){
+            System.out.println("enter the "+(i+1)+" value ");
+            int z=sc.nextInt();
+            list.add(z);
+        }
+        Collections.sort(list);
+        int j=list.size()-1;
+        for(int i=list.size()/2;i<list.size();i++){
+            if(i>j){
+                break;
+            }
+            Collections.swap(list,i,j);
+            j--;
+
+        }
+        System.out.println(list);
+    }
+}
