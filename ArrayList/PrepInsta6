@@ -1,0 +1,21 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ReverseArray {
+    public static void main(String[] args) {
+        ArrayList<Integer> list= new ArrayList<>();
+        System.out.println("tell us how many value will store here");
+        Scanner scanner= new Scanner(System.in);
+        int k= scanner.nextInt();
+        for(int i=0;i<k;i++){
+            System.out.println("Enter the "+(i+1)+" value ");
+            int kk=scanner.nextInt();
+            list.add(kk);
+        }
+      for(int i=list.size()-1;i>=0;i--){
+          System.out.println(list.get(i));
+      }
+    }
+}
