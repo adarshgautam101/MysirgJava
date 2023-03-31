@@ -1,0 +1,51 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CountDistinctValue {
+    public static void main(String[] args) {
+//   int []arr= new int[]{1,1};
+//   int count=0;
+//   for(int i=0;i<arr.length;i++){
+//       count++;
+//       for(int j=0;j<arr.length;j++){
+//           if(i==j){
+//               continue;
+//           }
+//           else if(arr[i]==arr[j]){
+//               if(i>j){
+//                   count--;
+//               }
+//           }
+//       }
+//
+//   }
+//        System.out.println(count);
+//    }
+        ArrayList<Integer> list=new ArrayList<>();
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter the size of the array you may change it when requires");
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            System.out.println("Enter the "+ (i+1)+" value");
+            int k=sc.nextInt();
+            list.add(k);
+        }
+        int count=0;
+        for(int i=0;i<list.size();i++){
+            count++;
+            for(int j=0;j<list.size();j++){
+                if(i==j){
+                    continue;
+                }
+                 else if(list.get(i)==list.get(j)){
+                    if(i>j){
+                        count--;
+                    }
+                }
+            }
+        }
+        System.out.println(count);
+    }
+}
