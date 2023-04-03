@@ -1,0 +1,29 @@
+package ArrayList;
+import java.util.Scanner;
+import java.util.ArrayList;
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of list");
+        int s=sc.nextInt();
+        ArrayList<Integer> list= new ArrayList<>();
+        for(int i=0;i<s;i++){
+            System.out.println("Enter the " +(i+1)+" value ");
+            int k=sc.nextInt();
+            list.add(k);
+        }
+        int countOdd=0;
+        int countEven=0;
+        for(int i=0;i< list.size();i++){
+            if (list.get(i)%2==0){
+                countEven++;
+            }
+            else
+            {
+                countOdd++;
+            }
+        }
+        System.out.println("The total number of odd "+countOdd);
+        System.out.println("The total number of even "+countEven);
+    }
+}
